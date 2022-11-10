@@ -66,7 +66,7 @@ var destinationsDB = {
 
 export default function App() {
   const [prefferedDestination, setprefferedDestination] = useState("Beaches");
-  function genreClickHandler(destinations) {
+  function destinationClickHandler(destinations) {
     setprefferedDestination(destinations);
   }
   return (
@@ -76,7 +76,7 @@ export default function App() {
       <div>
         {Object.keys(destinationsDB).map((destination) => (
           <button
-            onClick={() => genreClickHandler(destination)}
+            onClick={() => destinationClickHandler(destination)}
             style={{
               cursor: "pointer",
               background: "#fff",
